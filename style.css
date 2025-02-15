@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300..900&display=swap');
+
+:root {
+    --Pale-blue: hsl(225, 100%, 94%);
+    --Bright-blue: hsl(245, 75%, 52%);
+
+    --Very-pale-blue: hsl(225, 100%, 98%);
+    --Desaturated-blue: hsl(224, 23%, 55%);
+    --Dark-blue: hsl(223, 47%, 23%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Red Hat Display", serif;
+}
+body {
+    background: url("images/pattern-background-desktop.svg"), var(--Pale-blue);
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: grid;
+    min-height: 100vh;
+    place-content: center;
+}
+p {
+    font-size: 16px;
+}
+.margin-bottom {
+    margin-bottom: 20px;
+}
+main {
+    margin: 0 auto;
+    width: 420px;
+    background-color: white;
+    border-radius: 20px;
+    text-align: center;
+    flex-direction: column;
+    box-shadow: 10px 10px 30px 0px rgba(46,74,117,0.2);
+}
+main .main-image {
+    width: 100%;
+    border-radius: 20px 20px 0 0;
+}
+main .main-texts {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+}
+main .main-texts .order-summary {
+    font-weight: 800;
+    color: var(--Dark-blue);
+}
+main .main-texts .description {
+    color: var(--Desaturated-blue);
+    line-height: 1.5;
+    font-weight: 600;
+}
+main .main-texts .plan {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--Very-pale-blue);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+}
+main .main-texts .plan .annual-plan {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+main .main-texts .plan .annual-plan .plan-text {
+    font-weight: 900;
+    margin-bottom: 5px;
+}
+main .main-texts .plan .annual-plan .price {
+    color: var(--Desaturated-blue);
+    font-weight: 700;
+}
+main .main-texts .plan .change {
+    color: var(--Bright-blue);
+    font-weight: 700;
+    text-decoration: underline;
+    cursor: pointer;
+    transition: 0.2s;
+}
+main .main-texts .plan .change:hover {
+    text-decoration: none;
+    color: rgba(118,109,240,255);
+}
+.button {
+    border: none;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: var(--Bright-blue);
+    color: white;
+    font-weight: 700;
+    font-size: 1em;
+    transition: 0.2s;
+    cursor: pointer;
+    box-shadow: 0px 15px 30px 0px rgba(46,74,117,0.3);
+    margin-bottom: 25px;
+}
+.button:hover {
+    background-color: rgba(118,109,240,255);
+}
+.cancel {
+    color: var(--Desaturated-blue);
+    font-weight: 900;
+    transition: 0.2s;
+    cursor: pointer;
+    width: fit-content;
+    margin: 0 auto;
+    padding-bottom: 10px;
+}
+.cancel:hover {
+    color: var(--Dark-blue);
+}
+
+@media (max-width: 476px) {
+    body {
+        background: url("images/pattern-background-mobile.svg"), var(--Pale-blue);
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+    main {
+        width: 320px;
+    }
+    main .main-texts {
+        padding: 25px;
+    }
+    main .main-texts .order-summary {
+        font-size: 1.6em;
+    }
+    main .main-texts .plan {
+        padding: 15px;
+    }
+    p {
+        font-size: 14px;
+    }
+    .button {
+        padding: 12px;
+    }
+}
